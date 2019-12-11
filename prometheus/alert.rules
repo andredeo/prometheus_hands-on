@@ -1,0 +1,6 @@
+ALERT job-dead
+  IF count(up) == 0
+  FOR 10m
+  LABELS {
+    cause='Job dead',
+  }
